@@ -41,7 +41,7 @@ def nearestSPD(A,testPD=False,ModIfNotPD=False):
 	if testPD is False:
 		return Ahat
 	else:
-	#If testPD, will test if Ahat is positive definite by trying to Cholesky decomposed. 
+	#If testPD=True, will test if Ahat is positive definite by trying to Cholesky decomposed. 
 	#If not, tweak the matrix
 		p=1
 		k=0.
