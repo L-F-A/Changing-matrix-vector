@@ -34,7 +34,7 @@ def nearestSPD(A,testPD=False,ModIfNotPD=False):
 	B=0.5*(A+A.T)
 	U, S, Vt = np.linalg.svd(B)
         V = Vt.T
-	H= V.dot( S.dot(V.T) )
+	H= V.dot( np.diag(S).dot(V.T) )
 	Ahat=0.5*(B+H)
 	Ahat=0.5*(Ahat+Ahat.T)
 	
